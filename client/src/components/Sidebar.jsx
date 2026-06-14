@@ -3,7 +3,6 @@ import React from "react";
 import { FaTasks, FaTrashAlt, FaUsers } from "react-icons/fa";
 import {
   MdDashboard,
-  MdOutlineAddTask,
   MdOutlinePendingActions,
   MdSettings,
   MdTaskAlt,
@@ -12,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { setOpenSidebar } from "../redux/slices/authSlice";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import Logo from "./Logo";
 
 const linkData = [
   {
@@ -86,12 +86,10 @@ const Sidebar = () => {
 
   return (
     <div className='w-full h-full flex flex-col gap-6 p-5'>
-      <h1 className='flex gap-1 items-center'>
-        <p className='bg-blue-600 p-2 rounded-full'>
-          <MdOutlineAddTask className='text-white text-2xl font-black' />
-        </p>
-        <span className='text-2xl font-bold text-black dark:text-white'>
-          TaskMe
+      <h1 className='flex gap-2 items-center px-1'>
+        <Logo size={36} />
+        <span className='text-2xl font-bold tracking-tight text-black dark:text-white'>
+          Task<span className='text-blue-600'>Flow</span>
         </span>
       </h1>
 

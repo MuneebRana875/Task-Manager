@@ -114,7 +114,7 @@ const App = () => {
         </Routes>
       </div>
 
-      <Toaster richColors position='top-center' />
+      <Toaster richColors position='top-center' />  
     </main>
   );
 };
